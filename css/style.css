@@ -93,24 +93,24 @@ a:focus {
 
 h1 {
   font-family: "Sarabun";
-  font-size: 60px;
   font-weight: 300;
+  font-size: 60px;
   letter-spacing: -1px;
   margin-bottom: 1.5rem;
-  color: rgb(0, 0, 0);
+  color: #bb0d72e8;
 }
 
 h2 {
   font-size: 45px;
   font-weight: 300;
-  color: #633991;
+  color: #005f00b2;
   letter-spacing: -1px;
   margin-bottom: 1rem;
 }
 
 h3 {
   font-family: "Sarabun";
-  color: #633991;
+  color: #005f00b2;
   font-size: 33px;
   font-weight: 500;
 }
@@ -118,22 +118,22 @@ h3 {
 h4 {
   font-size: 20px;
   font-weight: 500;
-  color: #633991;
+  color: #797979;
 }
 
 h5 {
   font-size: 28px;
   font-weight: 300;
-  color: #633991;
+  color: #3b3b3b;
   margin-bottom: 0.7rem;
 }
 
 p {
-  color: #959094;
+  color: #939590;
 }
 
 p.lead {
-  color: #e38cb7;
+  color: #1b1b1b;
   margin-bottom: 2rem;
 }
 
@@ -151,12 +151,18 @@ p.lead {
   text-transform: uppercase;
   padding: 0.375rem 1.35rem;
   transition: all 0.3s ease;
+  color: #af004f;
 }
 
 .btn-outline-light:hover {
-  color: #d6619c;
+  color: #ffffff;
+  background-color: #00be00b2;
 }
-
+.btn-outline-light {
+  color: #ffffff;
+  background-color:#af004f;
+  border-color:transparent;
+}
 .btn-primary {
   border-radius: 3px;
   background-image: -moz-linear-gradient(122deg, #e54595 0%, #fd378e 100%);
@@ -199,7 +205,7 @@ p.lead {
 }
 
 .light-bg {
-  background-color: #faf6fb;
+  background-color: rgba(155, 255, 18, 0.3);
 }
 
 .section {
@@ -237,18 +243,18 @@ p.lead {
   background-color: rgb(74, 13, 143);
   background: -moz-linear-gradient(
     135deg,
-    rgb(74, 13, 143) 0%,
-    rgb(250, 42, 143) 100%
+    rgb(125, 255, 18) 0%,
+    rgb(255, 254, 214) 100%
   );
   background: -webkit-linear-gradient(
     135deg,
-    rgb(74, 13, 143) 0%,
-    rgb(250, 42, 143) 100%
+    rgb(125, 255, 18) 0%,
+    rgb(255, 254, 214) 100%
   );
   background: linear-gradient(
     135deg,
-    rgb(74, 13, 143) 0%,
-    rgb(250, 42, 143) 100%
+    rgb(125, 255, 18) 0%,
+    rgb(255, 254, 214) 100%
   );
   -webkit-box-shadow: 0px 5px 23px 0px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0px 5px 23px 0px rgba(0, 0, 0, 0.1);
@@ -259,9 +265,18 @@ p.lead {
   padding: 0;
 }
 
-.navbar-nav .nav-link {
+.navbar-dark .navbar-nav .nav-link {
   position: relative;
+  color:rgba(109, 72, 72, 1);
+
 }
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  position: relative;
+  color:rgba(150, 0, 0, 0.5);
+
+}
+
 
 @media (min-width: 992px) {
   .navbar-expand-lg .navbar-nav .nav-link {
@@ -271,7 +286,7 @@ p.lead {
   }
   .navbar-nav > .nav-item > .nav-link.active:after {
     content: "";
-    border-bottom: 2px solid #cd99d4;
+    border-bottom: 2px solid #af004f;
     left: 1rem;
     right: 1rem;
     bottom: 5px;
@@ -301,23 +316,23 @@ header {
 .bg-gradient {
   background-image: -moz-linear-gradient(
     135deg,
-    rgba(162, 255, 86, 0.8) 0%,
-    rgba(238, 223, 176, 0.8) 100%
+    rgba(155, 255, 18, 1) 0%,
+    rgba(255, 255, 255, 0.8) 100%
   );
   background-image: -webkit-linear-gradient(
     135deg,
-    rgba(162, 255, 86, 0.8) 0%,
-    rgba(233, 198, 214, 0.8) 100%
+    rgba(155, 255, 18, 1) 0%,
+    rgba(255, 255, 255, 0.8) 100%
   );
   background-image: -ms-linear-gradient(
     135deg,
-    rgba(162, 255, 86, 0.8) 0%,
-    rgba(233, 198, 214, 0.8) 100%
+    rgba(155, 255, 18, 1) 0%,
+    rgba(255, 255, 255, 0.8) 100%
   );
   background-image: linear-gradient(
     135deg,
-    rgba(162, 255, 86, 0.8) 0%,
-    rgba(233, 198, 214, 0.8) 100%
+    rgba(155, 255, 18, 1) 0%,
+    rgba(255, 255, 255, 0.8) 100%
   );
 }
 
@@ -325,7 +340,7 @@ header {
   font-family: "Sarabun";
   font-size: 23px;
   font-weight: 300;
-  color: #2b8d51e8;
+  color: #242424e8;
   max-width: 800px;
   margin: 0 auto;
 }
@@ -355,10 +370,10 @@ header {
 ----------------------*/
 
 .gradient-fill:before {
-  color: #fc73b4;
-  background: -moz-linear-gradient(top, #9477b4 0%, #fc73b4 100%);
-  background: -webkit-linear-gradient(top, #9477b4 0%, #fc73b4 100%);
-  background: linear-gradient(to bottom, #9477b4 0%, #fc73b4 100%);
+  color: #24da00;
+  background: -moz-linear-gradient(top, #add400 0%, #70f800 100%);
+  background: -webkit-linear-gradient(top, #add400 0%, #70f800 100%);
+  background: linear-gradient(to bottom, #add400 0%, #70f800 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -384,10 +399,10 @@ header {
   content: "";
   position: absolute;
   width: 3px;
-  color: #fc73b4;
-  background: -moz-linear-gradient(top, #9477b4 0%, #fc73b4 100%);
-  background: -webkit-linear-gradient(top, #9477b4 0%, #fc73b4 100%);
-  background: linear-gradient(to bottom, #9477b4 0%, #fc73b4 100%);
+  color: #24da00;
+  background: -moz-linear-gradient(top, #add400 0%, #70f800 100%);
+  background: -webkit-linear-gradient(top, #add400 0%, #70f800 100%);
+  background: linear-gradient(to bottom, #add400 0%, #70f800 100%);
   top: 0;
   bottom: 0;
   left: 0;
@@ -421,7 +436,7 @@ header {
   border-radius: 50%;
   margin-bottom: 1.5rem;
   background-color: #fff;
-  color: #f5378e;
+  color: #8b0d57e8;
   font-size: 48px;
   text-align: center;
   line-height: 80px;
@@ -439,10 +454,10 @@ header {
 }
 
 .ui-steps li:hover .circle-icon {
-  background-image: -moz-linear-gradient(122deg, #e6388e 0%, #fb378e 100%);
-  background-image: -webkit-linear-gradient(122deg, #e6388e 0%, #fb378e 100%);
-  background-image: -ms-linear-gradient(122deg, #e6388e 0%, #fb378e 100%);
-  background-image: linear-gradient(122deg, #e6388e 0%, #fb378e 100%);
+  background-image: -moz-linear-gradient(122deg, #8b0d57e8 0%, #af004f 100%);
+  background-image: -webkit-linear-gradient(122deg, #8b0d57e8 0%, #af004f 100%);
+  background-image: -ms-linear-gradient(122deg, #8b0d57e8 0%, #af004f 100%);
+  background-image: linear-gradient(122deg, #8b0d57e8 0%, #af004f 100%);
   box-shadow: 0px 9px 32px 0px rgba(0, 0, 0, 0.09);
   color: #fff;
 }
@@ -473,7 +488,7 @@ header {
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
   background-color: #fff;
-  box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.04);
+  box-shadow: 0px 5px 7px 0px rgba(172, 167, 167, 0.04);
   padding: 3rem;
 }
 
@@ -501,15 +516,15 @@ header {
   padding: 1rem 1rem;
   border-color: #faf6fb #faf6fb #fff;
   font-size: 19px;
-  color: #b5a4c8;
-  background: #f5eff7;
+  color: #a70040;
+  background: #eefde5;
 }
 
 .nav-tabs .nav-link.active {
-  background: #fff;
+  background: #a70040;
   border-top-width: 3px;
-  border-color: #ce75b4 #faf6fb #fff;
-  color: #633991;
+  border-color: #56b300 #faf6fb #fff;
+  color: #a70040;
 }
 
 /*  TESTIMONIALS
@@ -708,4 +723,99 @@ header {
     text-align: center;
     margin-top: 2rem;
   }
+}
+
+
+.registration-form{
+	padding: 50px 0;
+}
+
+.registration-form form{
+    background-color: #fff;
+    max-width: 500px;
+    margin: auto;
+    padding: 50px 70px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.075);
+}
+
+.registration-form .form-icon{
+	text-align: center;
+    background-color: #5891ff;
+    border-radius: 50%;
+    font-size: 40px;
+    color: white;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    margin-bottom: 50px;
+    line-height: 100px;
+}
+
+.registration-form .item{
+	border-radius: 20px;
+    margin-bottom: 25px;
+    padding: 10px 20px;
+}
+
+.registration-form .create-account{
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #5791ff;
+    border: none;
+    color: white;
+    margin-top: 20px;
+}
+
+.registration-form .social-media{
+    max-width: 600px;
+    background-color: #fff;
+    margin: auto;
+    padding: 35px 0;
+    text-align: center;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    color: #9fadca;
+    border-top: 1px solid #dee9ff;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.075);
+}
+
+.registration-form .social-icons{
+    margin-top: 30px;
+    margin-bottom: 16px;
+}
+
+.registration-form .social-icons a{
+    font-size: 23px;
+    margin: 0 3px;
+    color: #5691ff;
+    border: 1px solid;
+    border-radius: 50%;
+    width: 45px;
+    display: inline-block;
+    height: 45px;
+    text-align: center;
+    background-color: #fff;
+    line-height: 45px;
+}
+
+.registration-form .social-icons a:hover{
+    text-decoration: none;
+    opacity: 0.6;
+}
+
+@media (max-width: 576px) {
+    .registration-form form{
+        padding: 50px 20px;
+    }
+
+    .registration-form .form-icon{
+        width: 70px;
+        height: 70px;
+        font-size: 30px;
+        line-height: 70px;
+    }
 }
