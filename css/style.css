@@ -267,13 +267,12 @@ p.lead {
 
 .navbar-dark .navbar-nav .nav-link {
   position: relative;
-  color:rgba(109, 72, 72, 1);
-
+  color:rgb(43, 153, 0);
 }
 
 .navbar-dark .navbar-nav .nav-link:hover {
   position: relative;
-  color:rgba(150, 0, 0, 0.5);
+  color:rgba(7, 211, 0, 0.5);
 
 }
 
@@ -282,11 +281,11 @@ p.lead {
   .navbar-expand-lg .navbar-nav .nav-link {
     padding-right: 1rem;
     padding-left: 1rem;
-    font-size: 14px;
+    font-size: 20px;
   }
   .navbar-nav > .nav-item > .nav-link.active:after {
     content: "";
-    border-bottom: 2px solid #af004f;
+    border-bottom: 2px solid rgb(7, 211, 0);
     left: 1rem;
     right: 1rem;
     bottom: 5px;
@@ -517,15 +516,15 @@ header {
   padding: 1rem 1rem;
   border-color: #faf6fb #faf6fb #fff;
   font-size: 19px;
-  color: #a70040;
-  background: #eefde5;
+  color: #70ac75ad;
+  background:  rgba(236, 236, 236, 0.79);
 }
 
 .nav-tabs .nav-link.active {
-  background: #a70040;
+  background: white;
   border-top-width: 3px;
   border-color: #56b300 #faf6fb #fff;
-  color: #a70040;
+  color: #2c0101;
 }
 
 /*  TESTIMONIALS
@@ -856,3 +855,4 @@ header {
 .tabulator-row .tabulator-cell{
   padding:8px 4px;
 }
+
