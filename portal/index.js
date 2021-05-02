@@ -6,7 +6,7 @@ var tabledata = new Array();
 var profileimage = document.getElementById("pictureUrl");
 var DBsubscribeDate =  new Date().toISOString().slice(0, 10);
 var btn_sharepicker = document.getElementById("btn_sharepicker");
-btn_sharepicker.onclick = function(event){};
+btn_sharepicker.onclick = function(event){liff.logout()};
 var count=0;
 
 var table;
@@ -25,6 +25,8 @@ async function main()
     profileimage.src = profileimgURL;
 
     initFirebase();
+
+
     let listener = dbRef_usr.on('child_added', (param) => {     
         if(count>0)
         {
