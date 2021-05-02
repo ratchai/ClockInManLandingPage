@@ -13,7 +13,7 @@ var table;
 var dbRef_usr ;  //for subscribing new update
 var dbRef_query ; // for the first query
 
-async function initliff()
+async function main()
 {
     await liff.init({ liffId: "1655863402-2K8gzNPn" });
     if(!liff.isLoggedIn())
@@ -23,6 +23,8 @@ async function initliff()
     userid= profile.userId;
     profileimgURL= profile.pictureUrl;
     profileimage.src = profileimgURL;
+
+    initFirebase();
 }
 
 function initFirebase()
@@ -64,8 +66,8 @@ function getTimeFromTimeStamp(unix_timestamp)
 
 
 
-initliff();
-initFirebase();
+main();
+
 
 
 let listener = dbRef_usr.on('child_added', (param) => {     
