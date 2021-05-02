@@ -3,8 +3,9 @@ var userid;
 var profileimgURL;
 
 var tabledata = new Array();
+let now = new Date();
 var profileimage = document.getElementById("pictureUrl");
-var DBsubscribeDate =  moment(Date()).format('YYYY-MM-DD');
+var DBsubscribeDate =  moment(now).format('YYYY-MM-DD');
 var btn_sharepicker = document.getElementById("btn_sharepicker");
 btn_sharepicker.onclick = function(event){liff.logout()};
 var count=0;
