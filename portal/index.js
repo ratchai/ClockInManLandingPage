@@ -39,7 +39,8 @@ function initFirebase()
       };
       firebase.initializeApp(firebaseConfig);
        dbRef_usr = firebase.database().ref("CheckInTable/"+userid+"/"+DBsubscribeDate);//.child(userid+"/2021-05-02");
-     dbRef_query = firebase.database().ref("CheckInTable").child(userid).orderByKey().limitToLast(5);
+       dbRef_query = firebase.database().ref("CheckInTable").child(userid).orderByKey().limitToLast(5);
+       console.log(userid);
     //
 }
 
