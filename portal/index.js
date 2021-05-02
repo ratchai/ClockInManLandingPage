@@ -23,8 +23,21 @@ async function main()
     userid= profile.userId;
     profileimgURL= profile.pictureUrl;
     profileimage.src = profileimgURL;
-
-    initFirebase();
+    
+    const firebaseConfig = {
+        apiKey: "AIzaSyC4CozT8itBrDosBrMR5pBAIkeWPTp5eUo",
+        authDomain: "checkin-310e7.firebaseapp.com",
+        databaseURL: "https://checkin-310e7.firebaseio.com",
+        projectId: "checkin-310e7",
+        storageBucket: "checkin-310e7.appspot.com",
+        messagingSenderId: "1031310741781",
+        appId: "1:1031310741781:web:f78e888f082e2be768d91c",
+        measurementId: "G-T1NEF88G3H"
+      };
+      firebase.initializeApp(firebaseConfig);
+       dbRef_usr = firebase.database().ref("CheckInTable/"+userid+"/"+DBsubscribeDate);//.child(userid+"/2021-05-02");
+       dbRef_query = firebase.database().ref("CheckInTable").child(userid).orderByKey().limitToLast(5);
+       console.log(userid);
 
 
     let listener = dbRef_usr.on('child_added', (param) => {     
@@ -55,26 +68,6 @@ async function main()
     });
     
 }
-
-function initFirebase()
-{
-    const firebaseConfig = {
-        apiKey: "AIzaSyC4CozT8itBrDosBrMR5pBAIkeWPTp5eUo",
-        authDomain: "checkin-310e7.firebaseapp.com",
-        databaseURL: "https://checkin-310e7.firebaseio.com",
-        projectId: "checkin-310e7",
-        storageBucket: "checkin-310e7.appspot.com",
-        messagingSenderId: "1031310741781",
-        appId: "1:1031310741781:web:f78e888f082e2be768d91c",
-        measurementId: "G-T1NEF88G3H"
-      };
-      firebase.initializeApp(firebaseConfig);
-       dbRef_usr = firebase.database().ref("CheckInTable/"+userid+"/"+DBsubscribeDate);//.child(userid+"/2021-05-02");
-       dbRef_query = firebase.database().ref("CheckInTable").child(userid).orderByKey().limitToLast(5);
-       console.log(userid);
-    //
-}
-
 
 
 function getDateFromTimeStamp(unix_timestamp)
