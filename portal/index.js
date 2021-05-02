@@ -37,8 +37,8 @@ async function main()
       firebase.initializeApp(firebaseConfig);
        dbRef_usr = firebase.database().ref("CheckInTable/"+userid+"/"+DBsubscribeDate);//.child(userid+"/2021-05-02");
        dbRef_query = firebase.database().ref("CheckInTable").child(userid).orderByKey().limitToLast(5);
-       console.log(userid);
-
+       
+      console.log(DBsubscribeDate);
 
     let listener = dbRef_usr.on('child_added', (param) => {     
         if(count>0)
