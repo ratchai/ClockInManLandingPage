@@ -18,7 +18,7 @@ async function initliff()
     await liff.init({ liffId: "1655863402-2K8gzNPn" });
     if(!liff.isLoggedIn())
         await liff.login();
-    
+
     profile = liff.getProfile();
     userid= profile.userId;
     profileimgURL= profile.pictureUrl;
@@ -63,7 +63,7 @@ function getTimeFromTimeStamp(unix_timestamp)
 
 
 initliff();
-inifFirebase();
+initFirebase();
 
 
 let listener = dbRef_usr.on('child_added', (param) => {     
