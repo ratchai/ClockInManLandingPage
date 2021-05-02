@@ -19,7 +19,7 @@ async function initliff()
     if(!liff.isLoggedIn())
         await liff.login();
 
-    profile = liff.getProfile();
+    profile = await liff.getProfile();
     userid= profile.userId;
     profileimgURL= profile.pictureUrl;
     profileimage.src = profileimgURL;
