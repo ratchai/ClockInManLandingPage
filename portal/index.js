@@ -4,7 +4,7 @@ var profileimgURL;
 
 var tabledata = new Array();
 var profileimage = document.getElementById("pictureUrl");
-var DBsubscribeDate =  new Date().toISOString().slice(0, 10);
+var DBsubscribeDate =  moment(now).format('YYYY-MM-DD');
 var btn_sharepicker = document.getElementById("btn_sharepicker");
 btn_sharepicker.onclick = function(event){liff.logout()};
 var count=0;
