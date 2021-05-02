@@ -16,14 +16,15 @@ var dbRef_query ; // for the first query
 
 async function main()
 {
-    await liff.init({ liffId: "1655863402-2K8gzNPn" });
-    if(!liff.isLoggedIn())
-        await liff.login();
+    // await liff.init({ liffId: "1655863402-2K8gzNPn" });
+    // if(!liff.isLoggedIn())
+    //     await liff.login();
 
-    profile = await liff.getProfile();
-    userid= profile.userId;
-    profileimgURL= profile.pictureUrl;
-    profileimage.src = profileimgURL;
+    // profile = await liff.getProfile();
+    // userid= profile.userId;
+    // profileimgURL= profile.pictureUrl;
+    // profileimage.src = profileimgURL;
+    userid = "U5b62d3ed442c54f66e08f0d8186143ae";
     
     const firebaseConfig = {
         apiKey: "AIzaSyC4CozT8itBrDosBrMR5pBAIkeWPTp5eUo",
@@ -47,7 +48,9 @@ async function main()
             console.log("new item is added");
             console.log(param.val());
             table.addData(param.val(),true);
-            if(DBsubscribeDate!= new Date().toISOString().slice(0, 10))
+            let now = new Date();
+            let DBsubscribeDate1 =  moment(now).format('YYYY-MM-DD');
+            if(DBsubscribeDate!= DBsubscribeDate1)
             {
                 dbRef_usr.off('child_added',listener);            
             }
@@ -134,8 +137,9 @@ function addDataToTable(returnobj)
    table = new Tabulator("#example-table", {    
         layout:"fitDataStretch",
         data:tabledata,
-        rowAdded:function(row){            
-            row.classList.add("animation-class");
+        rowAdded:function(row){                            
+                row.getElement().classList.add("animation-class");
+                row.getNextRow().getElement().classList.remove("animation-class");
             },
         columns:[
             {title:"Date", field:"utcCreatedUnix", hozAlign:"center",formatter:function(cell,formatterParams){
