@@ -25,6 +25,33 @@ async function main()
     profileimage.src = profileimgURL;
 
     initFirebase();
+    let listener = dbRef_usr.on('child_added', (param) => {     
+        if(count>0)
+        {
+            console.log("new item is added");
+            console.log(param.val());
+            table.addData(param.val(),true);
+            if(DBsubscribeDate!= new Date().toISOString().slice(0, 10))
+            {
+                dbRef_usr.off('child_added',listener);            
+            }
+        }    
+    });
+    
+    
+    
+    //Query data
+    
+    dbRef_query.get().then((snapshot)=>{
+        var returnobj = snapshot.val();
+        console.log(returnobj);
+        if(count==0)
+        {
+            addDataToTable(returnobj);
+            count++;
+        }   
+    });
+    
 }
 
 function initFirebase()
@@ -70,32 +97,6 @@ main();
 
 
 
-let listener = dbRef_usr.on('child_added', (param) => {     
-    if(count>0)
-    {
-        console.log("new item is added");
-        console.log(param.val());
-        table.addData(param.val(),true);
-        if(DBsubscribeDate!= new Date().toISOString().slice(0, 10))
-        {
-            dbRef_usr.off('child_added',listener);            
-        }
-    }    
-});
-
-
-
-//Query data
-
-dbRef_query.get().then((snapshot)=>{
-    var returnobj = snapshot.val();
-    console.log(returnobj);
-    if(count==0)
-    {
-        addDataToTable(returnobj);
-        count++;
-    }   
-});
 
 
 function pushDataToTable(returnobj)
