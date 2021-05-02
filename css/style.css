@@ -835,7 +835,7 @@ header {
 
 .pictureUrl {  
   margin: 0 auto;
-  max-width: 100px;
+  max-width: 130px;
   display: -moz-box;
   display: -webkit-box;
   display: box;
