@@ -8,7 +8,7 @@ var DBsubscribeDate =  new Date().toISOString().slice(0, 10);
 var btn_sharepicker = document.getElementById("btn_sharepicker");
 btn_sharepicker.onclick = function(event){};
 var count=0;
-profileimage.src = profileimgURL;
+
 var table;
 var dbRef_usr ;  //for subscribing new update
 var dbRef_query ; // for the first query
@@ -22,9 +22,10 @@ async function initliff()
     profile = liff.getProfile();
     userid= profile.userId;
     profileimgURL= profile.pictureUrl;
+    profileimage.src = profileimgURL;
 }
 
-async function initFirebase()
+function initFirebase()
 {
     const firebaseConfig = {
         apiKey: "AIzaSyC4CozT8itBrDosBrMR5pBAIkeWPTp5eUo",
