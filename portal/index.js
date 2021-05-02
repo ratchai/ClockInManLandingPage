@@ -134,6 +134,9 @@ function addDataToTable(returnobj)
    table = new Tabulator("#example-table", {    
         layout:"fitDataStretch",
         data:tabledata,
+        rowAdded:function(row){
+            row.getElement().addClass("animation-class");
+            },
         columns:[
             {title:"Date", field:"utcCreatedUnix", hozAlign:"center",formatter:function(cell,formatterParams){
                 var value = cell.getValue();
