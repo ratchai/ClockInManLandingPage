@@ -16,15 +16,16 @@ var dbRef_query ; // for the first query
 
 async function main()
 {
-    // await liff.init({ liffId: "1655863402-2K8gzNPn" });
-    // if(!liff.isLoggedIn())
-    //     await liff.login();
+    await liff.init({ liffId: "1655863402-2K8gzNPn" });
+    if(!liff.isLoggedIn())
+        await liff.login();
 
-    // profile = await liff.getProfile();
-    // userid= profile.userId;
-    // profileimgURL= profile.pictureUrl;
-    // profileimage.src = profileimgURL;
-    userid = "U5b62d3ed442c54f66e08f0d8186143ae";
+    profile = await liff.getProfile();
+    userid= profile.userId;
+    profileimgURL= profile.pictureUrl;
+    console.log(profileimgURL);
+    profileimage.src = profileimgURL;
+   // userid = "U5b62d3ed442c54f66e08f0d8186143ae";
     
     const firebaseConfig = {
         apiKey: "AIzaSyC4CozT8itBrDosBrMR5pBAIkeWPTp5eUo",
